@@ -1,0 +1,119 @@
+Host *
+  #PubkeyAcceptedKeyTypes +ssh-dss
+#Host dev*.odesk.com
+#  ForwardAgent yes
+#  User nevpryaga_alex
+#  IdentityFile ~/.ssh/upwork_key
+#  UseKeychain yes
+  
+Host dev*
+  ForwardAgent yes
+  User nevpryaga_alex
+  IdentityFile ~/.ssh/upwork_rsa
+  
+Host 172.27.4.78
+  ForwardAgent yes
+  User nevpryaga_alex
+  IdentityFile ~/.ssh/upwork_key
+
+Host git.odesk.com
+  ForwardAgent yes
+  User nevpryaga_alex
+  IdentityFile ~/.ssh/upwork_key
+  
+Host stash.odesk.com
+  AddKeysToAgent yes
+  ForwardAgent yes
+  User nevpryaga_alex
+  IdentityFile ~/.ssh/upwork_rsa
+
+#Host ms*
+#  ForwardAgent yes
+#  User ms
+#  IdentityFile ~/.ssh/ms_rsa
+
+Host *.agate.upwork.com
+  AddKeysToAgent yes
+  ForwardAgent yes
+  User nevpryaga_alex
+  IdentityFile ~/.ssh/upwork_rsa
+
+Host ms
+  ForwardAgent yes
+  User osmc
+  IdentityFile ~/.ssh/id_rsa
+
+Host santaklouse.pp.ua
+  ForwardAgent yes
+  User osmc
+  Port 2222
+  IdentityFile ~/.ssh/id_rsa
+
+Host dev02-ec2.odesk.com
+  ForwardAgent yes
+  AddKeysToAgent yes
+  User nevpryaga_alex
+  IdentityFile ~/.ssh/upwork_rsa
+
+Host 172.27.72.*
+  AddKeysToAgent yes
+  ForwardAgent yes
+  User nevpryaga_alex
+  IdentityFile ~/.ssh/upwork_rsa
+
+Host *
+  #Ciphers blowfish-cbc,aes128-cbc,3des-cbc,cast128-cbc,arcfour,aes192-cbc,aes256-cbc
+
+Host *.onion
+  AddKeysToAgent yes
+  ForwardAgent yes
+  ProxyCommand ncat --proxy 127.0.0.1:9050 --proxy-type socks5 %h %p
+
+Host wvukseukmqp3yoqr.onion
+  Host t.tor
+  Port 22
+  HostName wvukseukmqp3yoqr.onion
+  ProxyCommand ncat --proxy 127.0.0.1:9050 --proxy-type socks5 %h %p
+  User root
+  AddKeysToAgent yes
+  ForwardAgent yes
+  IdentityFile ~/.ssh/id_rsa
+
+Host prxnat11.vpsrus.com
+  Host vps
+  Port 22213
+  HostName prxnat11.vpsrus.com
+  #ProxyCommand ncat --proxy 127.0.0.1:9050 --proxy-type socks5 $(tor-resolve %h) %p
+  User superuser
+  AddKeysToAgent yes
+  ForwardAgent yes
+  IdentityFile ~/.ssh/id_rsa
+
+Host ysmmml3edv7ab7ev.onion
+  Host vps.tor
+  Port 10022
+  HostName ysmmml3edv7ab7ev.onion
+  ProxyCommand ncat --proxy 127.0.0.1:9050 --proxy-type socks5 %h %p
+  User superuser
+  AddKeysToAgent yes
+  ForwardAgent yes
+  IdentityFile ~/.ssh/id_rsa
+
+Host alexhome.pp.ua
+  Host router
+  Port 10022
+  HostName alexhome.pp.ua
+  User superuser
+  AddKeysToAgent yes
+  ForwardAgent yes
+  IdentityFile ~/.ssh/id_rsa
+  
+Host qz426tfm6knu3wt5.onion
+  Host bridge.tor
+  Port 22
+  HostName qz426tfm6knu3wt5.onion
+  ProxyCommand ncat --proxy 127.0.0.1:9050 --proxy-type socks5 %h %p
+  User superuser
+  AddKeysToAgent yes
+  ForwardAgent yes
+  IdentityFile ~/.ssh/id_rsa

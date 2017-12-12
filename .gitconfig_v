@@ -1,0 +1,53 @@
+[user]
+	name = Alexander Voronin
+	email = avoronin@elance-odesk.com
+[alias]
+	bl = blame
+	br = branch -v
+	ci = commit
+	co = checkout
+    cl = clean -df
+	cp = cherry-pick
+	di = diff
+	ds = diff --staged
+	fe = fetch
+	nb = checkout -b
+	prb = pull --rebase
+	sh = stash
+	st = status
+	ll = log --format='[%Cred%cd%Creset] [%Cgreen%h%Creset] [%Cblue%cn%Creset] [%C(yellow)%s%Creset]'
+	rb = rebase
+	re = remote -v
+	rs = reset
+	cfg = config --global
+[core]
+    mergeoptions = --no-ff --no-commit
+    editor = vim
+	whitespace = tab-in-indent
+[log]
+	abbrevcommit = true
+[color]
+	branch = true
+	diff = true
+	status = true
+	ui = true
+[color "diff"]
+	old = red
+	new = green
+	frag = magenta
+	meta = yellow
+[merge]
+    log = true
+	summary = true
+	verbosity = 1
+[giggle]
+	main-window-maximized = true
+	main-window-geometry = 380x188+49+24
+	history-view-vpane-position = 392
+	file-view-vpane-position = 832
+	show-graph = false
+	main-window-view = HistoryView
+	file-view-hpane-position = 272
+[gui]
+	fontui = -family \"Liberation Sans\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+	fontdiff = -family \"Liberation Mono\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
